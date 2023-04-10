@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  /* border: 1px solid black; */
 }
 
 /*************************************************
@@ -185,4 +184,89 @@ img[src="./images/bell-ring-outline.svg"] {
 *************************************************/
 .content {
   padding: 2rem 1rem;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr auto;
+  gap: 2rem 1rem;
+}
+.projects {
+  grid-row: 1 / -1;
+}
+
+/* ANNOUNCEMENTS & TRENDING */
+.trending > div:first-of-type,
+.announcements > div:first-of-type {
+  font-size: 1.2rem;
+}
+.trending > div:last-of-type,
+.announcements > div:last-of-type {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 3px 2px 5px rgb(168, 168, 168);
+
+  display: grid;
+  align-content: start;
+}
+.announcements > div:last-of-type {
+  padding: 0.7rem 2rem;
+}
+.trending > div:last-of-type {
+  padding: 1.5rem 1.6rem;
+}
+.trending,
+.announcements {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 0.8rem;
+  width: 20rem;
+}
+
+/* ANNOUNCEMENTS */
+.post {
+  border-bottom: 1px solid lightgray;
+  padding: 15px 0;
+
+  display: grid;
+  align-content: center;
+  gap: 2px;
+}
+.post:last-of-type {
+  border-bottom: none;
+}
+.post > div:first-of-type {
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.post > div:last-of-type {
+  color: rgb(88, 88, 88);
+  font-size: 0.75rem;
+}
+
+/* TRENDING */
+.person {
+  display: grid;
+  grid-template: auto auto / auto auto;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+.person img[src] {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.person > div {
+  display: grid;
+  gap: 0.1rem;
+}
+.person > div > div:first-of-type {
+  font-size: 0.82rem;
+}
+.person > div > div:last-of-type {
+  font-size: 0.9rem;
+  color: rgb(114, 114, 114);
+}
+
+* {
+  /* border: 1px solid black; */
 }
