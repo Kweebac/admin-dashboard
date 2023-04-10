@@ -127,7 +127,6 @@ body {
 /* EACH THING */
 input[type="search"] {
   max-width: 40rem;
-  width: 1fr;
   border-radius: 12px;
   background-color: #e2e8f0;
   border: none;
@@ -217,7 +216,8 @@ img[src="./images/bell-ring-outline.svg"] {
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 0.8rem;
-  width: 20rem;
+  max-width: 20rem;
+  min-width: 15.2rem;
 }
 
 /* ANNOUNCEMENTS */
