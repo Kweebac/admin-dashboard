@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
-}
-div {
+  font-family: "Roboto", sans-serif;
   /* border: 1px solid black; */
 }
 
@@ -35,7 +34,8 @@ body {
 
   display: grid;
   gap: 3rem;
-  grid-template-rows: auto auto auto 1fr;
+  grid-template-rows: auto auto auto;
+  align-content: start;
 }
 .section {
   display: grid;
@@ -43,18 +43,19 @@ body {
 }
 .item {
   display: grid;
-  grid-template-columns: 10% auto 1fr;
+  grid-template-columns: 10% auto;
+  justify-content: start;
   align-items: center;
   gap: 1.2rem;
 }
 
+/* ITEM LISTS */
 .item img {
   height: 24px;
   width: 24px;
   justify-self: center;
 }
 .item img + div {
-  font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   color: white;
   cursor: pointer;
@@ -75,4 +76,113 @@ body {
 }
 .section:first-child .item div:hover {
   text-decoration: none;
+}
+
+/*************************************************
+* HEADER
+*************************************************/
+.header {
+  padding: 1rem 2.5rem;
+  display: grid;
+  gap: 1rem;
+}
+/* TOP */
+.top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+}
+.top .search {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem;
+  align-items: center;
+}
+.top .main-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1rem;
+  align-items: center;
+}
+
+/* BOTTOM */
+.bottom {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.bottom .greeting {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+.bottom .buttons {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* EACH THING */
+input[type="search"] {
+  max-width: 40rem;
+  width: 1fr;
+  border-radius: 12px;
+  background-color: #e2e8f0;
+  border: none;
+  height: 1.6rem;
+  padding-left: 10px;
+  padding-bottom: 1px;
+}
+.main-buttons img[src="./images/pfp3.png"] {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.main-buttons div {
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+}
+.greeting img[src="./images/pfp3.png"] {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.greeting > div > div {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.greeting > div > div:first-of-type {
+  font-size: 0.9rem;
+  font-weight: 1;
+}
+button {
+  background-color: #1992d4;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 25px;
+  width: 6.5rem;
+  height: 2.3rem;
+  cursor: pointer;
+}
+img[src="./images/magnify.svg"] {
+  cursor: pointer;
+  vertical-align: -3px;
+}
+img[src="./images/bell-ring-outline.svg"] {
+  cursor: pointer;
+}
+
+/*************************************************
+* CONTENT
+*************************************************/
+.content {
+  padding: 2rem 1rem;
 }
