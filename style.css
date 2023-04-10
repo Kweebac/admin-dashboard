@@ -1,8 +1,13 @@
+* {
+  box-sizing: border-box;
+}
 div {
   /* border: 1px solid black; */
 }
 
-/* MAIN */
+/*************************************************
+* MAIN
+*************************************************/
 body {
   height: 100vh;
 
@@ -22,8 +27,52 @@ body {
   background-color: #e2e8f0;
 }
 
-/* SIDEBAR */
+/*************************************************
+* SIDEBAR
+*************************************************/
 .sidebar {
+  padding: 1.3rem;
+
   display: grid;
-  /* grid-template-rows: auto auto 1fr; */
+  gap: 3rem;
+  grid-template-rows: auto auto auto 1fr;
+}
+.section {
+  display: grid;
+  gap: 10px;
+}
+.item {
+  display: grid;
+  grid-template-columns: 10% auto 1fr;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.item img {
+  height: 24px;
+  width: 24px;
+  justify-self: center;
+}
+.item img + div {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+.item img + div:hover {
+  text-decoration: underline;
+}
+
+/* DASHBOARD TITLE */
+.section:first-child .item img {
+  height: 35px;
+  width: 35px;
+}
+.section:first-child .item div {
+  font-weight: bold;
+  font-size: 1.3rem;
+  cursor: default;
+}
+.section:first-child .item div:hover {
+  text-decoration: none;
 }
