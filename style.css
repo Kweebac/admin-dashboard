@@ -293,6 +293,7 @@ img[src="./images/bell-ring-outline.svg"] {
   border-radius: 12px;
   box-shadow: 3px 2px 5px rgb(205, 205, 205);
   padding: 1rem;
+  border-left: 7px solid #30d775;
 
   display: grid;
   grid-template-rows: auto auto 1fr;
@@ -323,8 +324,4 @@ img[src="./images/bell-ring-outline.svg"] {
 }
 .card img {
   cursor: pointer;
-}
-
-* {
-  /* border: 1px solid black; */
 }
